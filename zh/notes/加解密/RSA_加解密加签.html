@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>RSA | NOHI Notes</title>
+    <meta name="description" content="使用VuePress制作的个人笔记">
+    <link rel="icon" href="/nohi-notes/logo.png">
+  <link rel="manifest" href="/nohi-notes/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/nohi-notes/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/nohi-notes/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/nohi-notes/assets/css/0.styles.1941b90a.css" as="style"><link rel="preload" href="/nohi-notes/assets/js/app.e9cf2b0b.js" as="script"><link rel="preload" href="/nohi-notes/assets/js/3.a6db454b.js" as="script"><link rel="preload" href="/nohi-notes/assets/js/59.a1e5a3c7.js" as="script"><link rel="preload" href="/nohi-notes/assets/js/9.e14bb30f.js" as="script"><link rel="prefetch" href="/nohi-notes/assets/js/2.9723e19f.js"><link rel="prefetch" href="/nohi-notes/assets/js/4.8567c829.js"><link rel="prefetch" href="/nohi-notes/assets/js/5.e76f6a3f.js"><link rel="prefetch" href="/nohi-notes/assets/js/6.6bf56793.js"><link rel="prefetch" href="/nohi-notes/assets/js/7.97240ff8.js"><link rel="prefetch" href="/nohi-notes/assets/js/8.638c7ebf.js"><link rel="prefetch" href="/nohi-notes/assets/js/10.a5638177.js"><link rel="prefetch" href="/nohi-notes/assets/js/11.27847133.js"><link rel="prefetch" href="/nohi-notes/assets/js/12.b2c7d924.js"><link rel="prefetch" href="/nohi-notes/assets/js/13.43c6c48b.js"><link rel="prefetch" href="/nohi-notes/assets/js/14.56c5258f.js"><link rel="prefetch" href="/nohi-notes/assets/js/15.d5e327ab.js"><link rel="prefetch" href="/nohi-notes/assets/js/16.d73beaec.js"><link rel="prefetch" href="/nohi-notes/assets/js/17.661701c7.js"><link rel="prefetch" href="/nohi-notes/assets/js/18.dc2b0372.js"><link rel="prefetch" href="/nohi-notes/assets/js/19.810f78fc.js"><link rel="prefetch" href="/nohi-notes/assets/js/20.7a6981c9.js"><link rel="prefetch" href="/nohi-notes/assets/js/21.89b7eb1f.js"><link rel="prefetch" href="/nohi-notes/assets/js/22.5e046388.js"><link rel="prefetch" href="/nohi-notes/assets/js/23.d786b8c3.js"><link rel="prefetch" href="/nohi-notes/assets/js/24.1826f599.js"><link rel="prefetch" href="/nohi-notes/assets/js/25.cab72538.js"><link rel="prefetch" href="/nohi-notes/assets/js/26.7c82a77f.js"><link rel="prefetch" href="/nohi-notes/assets/js/27.697b8e79.js"><link rel="prefetch" href="/nohi-notes/assets/js/28.2a357d47.js"><link rel="prefetch" href="/nohi-notes/assets/js/29.9e844cf5.js"><link rel="prefetch" href="/nohi-notes/assets/js/30.3f8eb714.js"><link rel="prefetch" href="/nohi-notes/assets/js/31.61d112ea.js"><link rel="prefetch" href="/nohi-notes/assets/js/32.9f058712.js"><link rel="prefetch" href="/nohi-notes/assets/js/33.18e304d1.js"><link rel="prefetch" href="/nohi-notes/assets/js/34.51298473.js"><link rel="prefetch" href="/nohi-notes/assets/js/35.95fa5bdf.js"><link rel="prefetch" href="/nohi-notes/assets/js/36.b005dd3e.js"><link rel="prefetch" href="/nohi-notes/assets/js/37.3b30f0ab.js"><link rel="prefetch" href="/nohi-notes/assets/js/38.18f32bc5.js"><link rel="prefetch" href="/nohi-notes/assets/js/39.bfa45813.js"><link rel="prefetch" href="/nohi-notes/assets/js/40.a3010e10.js"><link rel="prefetch" href="/nohi-notes/assets/js/41.5cda8892.js"><link rel="prefetch" href="/nohi-notes/assets/js/42.cfc85412.js"><link rel="prefetch" href="/nohi-notes/assets/js/43.5e91ad90.js"><link rel="prefetch" href="/nohi-notes/assets/js/44.c4eda4da.js"><link rel="prefetch" href="/nohi-notes/assets/js/45.d96bde30.js"><link rel="prefetch" href="/nohi-notes/assets/js/46.28cbc536.js"><link rel="prefetch" href="/nohi-notes/assets/js/47.2e10cb30.js"><link rel="prefetch" href="/nohi-notes/assets/js/48.8fa88c02.js"><link rel="prefetch" href="/nohi-notes/assets/js/49.3ba30644.js"><link rel="prefetch" href="/nohi-notes/assets/js/50.910ab97c.js"><link rel="prefetch" href="/nohi-notes/assets/js/51.e0589134.js"><link rel="prefetch" href="/nohi-notes/assets/js/52.730794b9.js"><link rel="prefetch" href="/nohi-notes/assets/js/53.838d6176.js"><link rel="prefetch" href="/nohi-notes/assets/js/54.2ad0af07.js"><link rel="prefetch" href="/nohi-notes/assets/js/55.d7b5192d.js"><link rel="prefetch" href="/nohi-notes/assets/js/56.22edaa70.js"><link rel="prefetch" href="/nohi-notes/assets/js/57.8dc3a100.js"><link rel="prefetch" href="/nohi-notes/assets/js/58.64e51511.js"><link rel="prefetch" href="/nohi-notes/assets/js/60.6bf391b1.js"><link rel="prefetch" href="/nohi-notes/assets/js/61.620d2cae.js"><link rel="prefetch" href="/nohi-notes/assets/js/62.229b7a04.js"><link rel="prefetch" href="/nohi-notes/assets/js/63.515467ac.js"><link rel="prefetch" href="/nohi-notes/assets/js/64.139a9b41.js"><link rel="prefetch" href="/nohi-notes/assets/js/65.7d72d578.js"><link rel="prefetch" href="/nohi-notes/assets/js/66.62ec2007.js"><link rel="prefetch" href="/nohi-notes/assets/js/67.3044e6d6.js"><link rel="prefetch" href="/nohi-notes/assets/js/68.89457e56.js"><link rel="prefetch" href="/nohi-notes/assets/js/69.54945067.js"><link rel="prefetch" href="/nohi-notes/assets/js/70.b67ffe17.js"><link rel="prefetch" href="/nohi-notes/assets/js/71.3fd5003d.js"><link rel="prefetch" href="/nohi-notes/assets/js/72.9450b9d6.js"><link rel="prefetch" href="/nohi-notes/assets/js/73.e16f060e.js"><link rel="prefetch" href="/nohi-notes/assets/js/74.861528f4.js"><link rel="prefetch" href="/nohi-notes/assets/js/75.90c48e88.js"><link rel="prefetch" href="/nohi-notes/assets/js/76.f9ef42ce.js"><link rel="prefetch" href="/nohi-notes/assets/js/77.5e7dc630.js"><link rel="prefetch" href="/nohi-notes/assets/js/78.953544bb.js"><link rel="prefetch" href="/nohi-notes/assets/js/vendors~flowchart.b2bfdaf1.js"><link rel="prefetch" href="/nohi-notes/assets/js/vendors~notification.1d498dcc.js">
+    <link rel="stylesheet" href="/nohi-notes/assets/css/0.styles.1941b90a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/nohi-notes/zh/" class="home-link router-link-active"><!----> <span class="site-name">NOHI Notes</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/nohi-notes/zh/notes/" class="nav-link router-link-active">Notes</a></div><div class="nav-item"><a href="/nohi-notes/zh/jvm/" class="nav-link">JVM</a></div><div class="nav-item"><a href="/nohi-notes/zh/db/" class="nav-link">DB</a></div><div class="nav-item"><a href="/nohi-notes/zh/html/" class="nav-link">html</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">版本</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/git.html" class="nav-link">GIT</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/svn.html" class="nav-link">SVN</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/mvn.html" class="nav-link">MVN</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/gradle.html" class="nav-link">GRADLE</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">服务器</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/linux.html" class="nav-link">linux</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/nginx.html" class="nav-link">nginx</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/docker.html" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/docker_实例.html" class="nav-link">docker_实例</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/es7.html" class="nav-link">es7</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/Tomcat.html" class="nav-link">Tomcat</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/vim.html" class="nav-link">vim</a></li></ul></div></div><div class="nav-item"><a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress指南
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/thisisnohi/nohi-notes/blob/master/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Changelog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/nohi-notes/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/notes/加解密/RSA_加解密加签.html" class="nav-link">简体中文</a></li></ul></div></div> <a href="https://github.com/thisisnohi/nohi-notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/nohi-notes/zh/notes/" class="nav-link router-link-active">Notes</a></div><div class="nav-item"><a href="/nohi-notes/zh/jvm/" class="nav-link">JVM</a></div><div class="nav-item"><a href="/nohi-notes/zh/db/" class="nav-link">DB</a></div><div class="nav-item"><a href="/nohi-notes/zh/html/" class="nav-link">html</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">版本</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/git.html" class="nav-link">GIT</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/svn.html" class="nav-link">SVN</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/mvn.html" class="nav-link">MVN</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/version/gradle.html" class="nav-link">GRADLE</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">服务器</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/linux.html" class="nav-link">linux</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/nginx.html" class="nav-link">nginx</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/docker.html" class="nav-link">docker</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/docker_实例.html" class="nav-link">docker_实例</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/es7.html" class="nav-link">es7</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/Tomcat.html" class="nav-link">Tomcat</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/server/vim.html" class="nav-link">vim</a></li></ul></div></div><div class="nav-item"><a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress指南
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/thisisnohi/nohi-notes/blob/master/CHANGELOG.md" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Changelog
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/nohi-notes/" class="nav-link">English</a></li><li class="dropdown-item"><!----> <a href="/nohi-notes/zh/notes/加解密/RSA_加解密加签.html" class="nav-link">简体中文</a></li></ul></div></div> <a href="https://github.com/thisisnohi/nohi-notes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>笔记</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/nohi-notes/zh/notes/" class="sidebar-link">介绍</a></li><li><a href="/nohi-notes/zh/notes/name.html" class="sidebar-link">名词解释</a></li><li><a href="/nohi-notes/zh/notes/Java_test.html" class="sidebar-link">Java_test</a></li><li><a href="/nohi-notes/zh/notes/java_基础.html" class="sidebar-link">Java基础</a></li><li><a href="/nohi-notes/zh/notes/datasource.html" class="sidebar-link">druid</a></li><li><a href="/nohi-notes/zh/notes/nohi_mac.html" class="sidebar-link">nohi_mac</a></li><li><a href="/nohi-notes/zh/notes/wechat.html" class="sidebar-link">微信公众号</a></li><li><a href="/nohi-notes/zh/notes/nodejs.html" class="sidebar-link">nodejs</a></li><li><a href="/nohi-notes/zh/notes/ognl.html" class="sidebar-link">OGNL</a></li><li><a href="/nohi-notes/zh/notes/python_note.html" class="sidebar-link">Django笔记</a></li><li><a href="/nohi-notes/zh/notes/加解密/RSA_加解密加签.html" class="active sidebar-link">RSA</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/nohi-notes/zh/notes/加解密/RSA_加解密加签.html#加解密加签验签过程" class="sidebar-link">加解密加签验签过程</a></li><li class="sidebar-sub-header"><a href="/nohi-notes/zh/notes/加解密/RSA_加解密加签.html#密钥及格式生成" class="sidebar-link">密钥及格式生成</a></li><li class="sidebar-sub-header"><a href="/nohi-notes/zh/notes/加解密/RSA_加解密加签.html#demo" class="sidebar-link">DEMO</a></li></ul></li><li><a href="/nohi-notes/zh/notes/加解密/AES加密解密.html" class="sidebar-link">AES加密解密</a></li><li><a href="/nohi-notes/zh/notes/sonar.html" class="sidebar-link">sonar</a></li><li><a href="/nohi-notes/zh/notes/Typora_Note.html" class="sidebar-link">Typora Note</a></li><li><a href="/nohi-notes/zh/notes/Was.html" class="sidebar-link">Was</a></li><li><a href="/nohi-notes/zh/notes/webservice.html" class="sidebar-link">Webservice</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="rsa"><a href="#rsa" aria-hidden="true" class="header-anchor">#</a> RSA</h1> <h2 id="加解密加签验签过程"><a href="#加解密加签验签过程" aria-hidden="true" class="header-anchor">#</a> 加解密加签验签过程</h2> <ul><li>加密、加签
+<ul><li>对方公钥加密数据</li> <li>本方私钥对加密后数据进行加签，得到加签数据</li></ul></li> <li>验签、解密过程
+<ul><li>获取对方传送加密数据、加签数据</li> <li>用对方公钥对加签数据进行验签</li> <li>用本方私钥对加密数据进行解密</li></ul></li></ul> <h2 id="密钥及格式生成"><a href="#密钥及格式生成" aria-hidden="true" class="header-anchor">#</a> 密钥及格式生成</h2> <div class="language- extra-class"><pre class="language-text"><code>-- 生成私钥
+openssl genrsa -out rsa_private_key.pem 1024
+
+openssl rsa -in rsa_private_key.pem -out rsa_public_key.pem -pubout
+
+-- 转换为pkcs8
+openssl pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform pem -nocrypt -out rsa_private_key_pkcs8.pem 
+
+-- pkcs8 转pkcs1
+openssl rsa -in pkcs8.pem -out pkcs1.pem
+</code></pre></div><ul><li>密钥2048，解密时需要设置 最大解密长度=256</li></ul> <h2 id="demo"><a href="#demo" aria-hidden="true" class="header-anchor">#</a> DEMO</h2> <blockquote><p>说明：加解密、验签需要双方密钥格式一至，在测试过程中由于密钥保存时，编辑器自动增加回车换行，一直出现解密失败、验签失败情况。</p> <p>密钥直接使用一行字符串，如果用common-codes包的base64转码，出现多行数据，很容易导致解密、验签失败问题</p></blockquote> <ul><li>加解密工具类</li></ul> <div class="language- extra-class"><pre class="language-text"><code>package nohi.encrpty;
+
+import org.apache.commons.lang3.ArrayUtils;
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
+import javax.crypto.Cipher;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
+import java.security.*;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
+import java.security.spec.RSAPublicKeySpec;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.Base64;
+
+public class RSAUtils {
+    public static final String SIGN_ALGORITHMS = &quot;SHA1WithRSA&quot;;
+    private static String RSA = &quot;RSA&quot;;
+    private final static Base64.Decoder DECODER_64 = Base64.getDecoder();
+    private final static Base64.Encoder ENCODER_64 = Base64.getEncoder();
+
+
+    public static KeyPair generateRSAKeyPair() {
+        return generateRSAKeyPair(1024);
+    }
+
+    public static KeyPair generateRSAKeyPair(int keyLength) {
+        try {
+            KeyPairGenerator kpg = KeyPairGenerator.getInstance(RSA);
+            kpg.initialize(keyLength);
+            return kpg.genKeyPair();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static String encryptData(String data, PublicKey publicKey){
+        return ENCODER_64.encodeToString(RSAUtils.encryptData(data.getBytes(), publicKey));
+    }
+
+    public static byte[] encryptData(byte[] data, PublicKey publicKey) {
+        try {
+            byte[] dataReturn = new byte[0];
+            Cipher cipher = Cipher.getInstance(RSA);
+            cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+
+            // 加密时超过117字节就报错。为此采用分段加密的办法来加密
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i &lt; data.length; i += 100) {
+                byte[] doFinal = cipher.doFinal(ArrayUtils.subarray(data, i,
+                        i + 100));
+                sb.append(new String(doFinal));
+                dataReturn = ArrayUtils.addAll(dataReturn, doFinal);
+            }
+            return dataReturn;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 验证数字签名函数入口
+     *
+     * @param plainBytes 待验签明文字节数组
+     * @param signBytes  待验签签名后字节数组
+     * @param publicKey  验签使用公钥
+     * @return 验签是否通过
+     * @throws Exception
+     */
+    public static boolean verifyDigitalSign(byte[] plainBytes, byte[] signBytes, PublicKey publicKey) throws Exception {
+        boolean isValid = false;
+        try {
+            Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+            signature.initVerify(publicKey);
+            signature.update(plainBytes);
+            isValid = signature.verify(signBytes);
+            return isValid;
+        } catch (NoSuchAlgorithmException e) {
+            throw new Exception(String.format(&quot;验证数字签名时没有[%s]此类算法&quot;, SIGN_ALGORITHMS));
+        } catch (InvalidKeyException e) {
+            throw new Exception(&quot;验证数字签名时公钥无效&quot;);
+        } catch (SignatureException e) {
+            throw new Exception(&quot;验证数字签名时出现异常&quot;);
+        }
+    }
+
+    public static String rsaSign(byte[] encryptByte, PrivateKey privateKey) {
+        try {
+            Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+            signature.initSign(privateKey);
+            signature.update(encryptByte);
+            byte[] signed = signature.sign();
+            return (new BASE64Encoder()).encodeBuffer(signed);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static String decryptData(String content, PrivateKey privateKey) throws IOException {
+        return new String(RSAUtils.decryptData((new BASE64Decoder()).decodeBuffer(content), privateKey));
+    }
+
+    public static byte[] decryptData(byte[] encryptedData, PrivateKey privateKey) {
+        try {
+            Cipher cipher = Cipher.getInstance(RSA);
+            cipher.init(Cipher.DECRYPT_MODE, privateKey);
+
+            // 解密时超过128字节就报错。为此采用分段解密的办法来解密
+            byte[] dataReturn = new byte[0];
+            for (int i = 0; i &lt; encryptedData.length; i += 128) {
+                byte[] doFinal = cipher.doFinal(ArrayUtils.subarray(encryptedData, i,
+                        i + 128));
+                dataReturn = ArrayUtils.addAll(dataReturn, doFinal);
+            }
+
+            return dataReturn;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static boolean doCheck(byte[] encryptByte, byte[] bs, PublicKey publicKey) {
+        try {
+            Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+            signature.initVerify(publicKey);
+            signature.update(encryptByte);
+            return signature.verify(bs);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+    public static PublicKey getPublicKey(byte[] keyBytes) throws NoSuchAlgorithmException,
+            InvalidKeySpecException {
+        X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
+        KeyFactory keyFactory = KeyFactory.getInstance(RSA);
+        PublicKey publicKey = keyFactory.generatePublic(keySpec);
+        return publicKey;
+    }
+
+    public static PrivateKey getPrivateKey(byte[] keyBytes) throws NoSuchAlgorithmException,
+            InvalidKeySpecException {
+        PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
+        KeyFactory keyFactory = KeyFactory.getInstance(RSA);
+        PrivateKey privateKey = keyFactory.generatePrivate(keySpec);
+        return privateKey;
+    }
+
+    public static PublicKey getPublicKey(String modulus, String publicExponent)
+            throws NoSuchAlgorithmException, InvalidKeySpecException {
+        BigInteger bigIntModulus = new BigInteger(modulus);
+        BigInteger bigIntPrivateExponent = new BigInteger(publicExponent);
+        RSAPublicKeySpec keySpec = new RSAPublicKeySpec(bigIntModulus, bigIntPrivateExponent);
+        KeyFactory keyFactory = KeyFactory.getInstance(RSA);
+        PublicKey publicKey = keyFactory.generatePublic(keySpec);
+        return publicKey;
+    }
+
+    public static PrivateKey getPrivateKey(String modulus, String privateExponent)
+            throws NoSuchAlgorithmException, InvalidKeySpecException {
+        BigInteger bigIntModulus = new BigInteger(modulus);
+        BigInteger bigIntPrivateExponent = new BigInteger(privateExponent);
+        RSAPublicKeySpec keySpec = new RSAPublicKeySpec(bigIntModulus, bigIntPrivateExponent);
+        KeyFactory keyFactory = KeyFactory.getInstance(RSA);
+        PrivateKey privateKey = keyFactory.generatePrivate(keySpec);
+        return privateKey;
+    }
+
+    public static PublicKey loadPublicKey(String publicKeyStr) throws Exception {
+        byte[] buffer = (new BASE64Decoder()).decodeBuffer(publicKeyStr);
+        KeyFactory keyFactory = KeyFactory.getInstance(RSA);
+        X509EncodedKeySpec keySpec = new X509EncodedKeySpec(buffer);
+        return keyFactory.generatePublic(keySpec);
+    }
+
+    public static PrivateKey loadPrivateKey(String privateKeyStr) throws Exception {
+        byte[] buffer = (new BASE64Decoder()).decodeBuffer(privateKeyStr);
+        PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(buffer);
+        KeyFactory keyFactory = KeyFactory.getInstance(RSA);
+        return keyFactory.generatePrivate(keySpec);
+    }
+
+    public static PublicKey loadPublicKey(InputStream in) throws Exception {
+        return loadPublicKey(readKey(in));
+    }
+
+    public static PrivateKey loadPrivateKey(InputStream in) throws Exception {
+        return loadPrivateKey(readKey(in));
+    }
+
+    private static String readKey(InputStream in) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
+        String readLine = null;
+        StringBuilder sb = new StringBuilder();
+        while ((readLine = br.readLine()) != null) {
+            if (readLine.charAt(0) == '-') {
+                continue;
+            } else {
+                sb.append(readLine);
+                sb.append('\r');
+            }
+        }
+        System.out.println(&quot;1111:\n&quot; + sb.toString());
+        return sb.toString();
+    }
+
+    /**
+     * 验签
+     *
+     * @param srcData   原始字符串
+     * @param publicKey 公钥
+     * @param sign      签名
+     * @return 是否验签通过
+     */
+    public static boolean verify(String srcData, PublicKey publicKey, String sign) throws Exception {
+        Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+        signature.initVerify(publicKey);
+        signature.update(srcData.getBytes());
+        return signature.verify(DECODER_64.decode(sign));
+    }
+
+    public static String sign(String data, PrivateKey privateKey) throws Exception {
+        Signature signature = Signature.getInstance(SIGN_ALGORITHMS);
+        signature.initSign(privateKey);
+        signature.update(data.getBytes());
+        return ENCODER_64.encodeToString(signature.sign());
+    }
+}
+
+</code></pre></div><ul><li><p>测试类</p> <div class="language- extra-class"><pre class="language-text"><code>@Test
+    public void testRsa加密加签() throws Exception {
+        String pubFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/对方系统公钥字符串.txt&quot;;
+        String priFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/RSA_PRI.KEY&quot;;
+        String loalPubFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/RSA_PUB.KEY&quot;;
+
+        String priKey = FileUtils.readStringfromPath(priFile);
+        String pubKey = FileUtils.readStringfromPath(pubFile);
+        String localPub = FileUtils.readStringfromPath(loalPubFile);
+        System.out.println(&quot;priKey:&quot; + priKey);
+        System.out.println(&quot;pubKey:&quot; + pubKey);
+        System.out.println(&quot;localPub:&quot; + localPub);
+
+        System.out.println(&quot;==========================&quot;);
+
+        pubKey = _2Stri(pubKey);
+        priKey = _2Stri(priKey);
+        localPub = _2Stri(localPub);
+
+        System.out.println(&quot;priKey:\n&quot; + priKey);
+        System.out.println(&quot;pubKey:\n&quot; + pubKey);
+        System.out.println(&quot;localPub:\n&quot; + localPub);
+
+        PrivateKey privateKey = RSAUtils.loadPrivateKey(priKey);
+        PublicKey publicKey = RSAUtils.loadPublicKey(pubKey);
+        PublicKey locaPublicKey = RSAUtils.loadPublicKey(localPub);
+        // 加密
+        String data = &quot;{\&quot;htbh\&quot;:\&quot;20200629\&quot;}&quot;;
+        System.out.println(data);
+        String encryptStr = RSAUtils.encryptData(data, publicKey);
+        System.out.println(&quot;加密数据:&quot; + encryptStr);
+
+        // RSA签名
+        String sign = RSAUtils.sign2(encryptStr, privateKey);
+        System.out.println(&quot;加签:&quot; + sign);
+
+        // 验签
+        boolean result = RSAUtils.verify2(encryptStr, locaPublicKey, sign);
+        System.out.println(&quot;验签结果1:&quot; + result);
+    }
+    
+    @Test
+    public void testRsa验签() throws Exception {
+        String pubKeyFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/租赁系统公钥字符串.txt&quot;;
+
+        String localSignFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/密文_sign_local.txt&quot;;
+        String localDataFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/密文_data_local.txt&quot;;
+        String priFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/RSA_PRI.KEY&quot;;
+
+        String priKey = FileUtils.readStringfromPath(priFile);
+        String localData = FileUtils.readStringfromPath(localDataFile);
+        String localSign = FileUtils.readStringfromPath(localSignFile);
+        String localPub = FileUtils.readStringfromPath(pubKeyFile);
+        System.out.println(&quot;localData:&quot; + localData);
+        System.out.println(&quot;localSign:&quot; + localSign);
+        System.out.println(&quot;localPub:&quot; + localPub);
+
+        PublicKey locaPublicKey = RSAUtils.loadPublicKey(localPub);
+
+        // 验签
+        boolean result = RSAUtils.verify2(localData, locaPublicKey, localSign);
+        System.out.println(&quot;验签结果1:&quot; + result);
+
+        PrivateKey privateKey = RSAUtils.loadPrivateKey(priKey);
+        // 解密
+        String data = RSAUtils.decryptData(localData, privateKey);
+        System.out.println(&quot;原文:&quot; + data);
+    }
+
+    @Test
+    public void testRsa验签解密() throws Exception {
+        String pubFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/租赁系统公钥字符串.txt&quot;;
+        String priFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/RSA_PRI.KEY&quot;;
+
+        String contentFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/密文_data.txt&quot;;
+        String signFile = &quot;/Users/nohi/work/workspaces-nohi/nohithink/thinkinjava/src/test/resources/密文_sign.txt&quot;;
+
+        String priKey = FileUtils.readStringfromPath(priFile);
+        String pubKey = FileUtils.readStringfromPath(pubFile);
+        String content = FileUtils.readStringfromPath(contentFile);
+        String sign = FileUtils.readStringfromPath(signFile);
+
+//        System.out.println(&quot;priKey:&quot; + priKey);
+        System.out.println(&quot;pubKey:&quot; + pubKey);
+        System.out.println(&quot;content:&quot; + content);
+        System.out.println(&quot;sign:&quot; + sign);
+
+        System.out.println(&quot;==========================&quot;);
+        pubKey = _2Stri(pubKey);
+        priKey = _2Stri(priKey);
+        System.out.println(&quot;pubKey:\n&quot; + pubKey);
+//        System.out.println(&quot;priKey:\n&quot; + priKey);
+
+        System.out.println(&quot;pubKey:\n&quot; + pubKey);
+        System.out.println(&quot;priKey:\n&quot; + priKey);
+        System.out.println(&quot;content:\n&quot; + content);
+        System.out.println(&quot;sign:\n&quot; + sign);
+
+        PrivateKey privateKey = RSAUtils.loadPrivateKey(priKey);
+        PublicKey publicKey = RSAUtils.loadPublicKey(pubKey);
+
+        // 解密
+        String data = RSAUtils.decryptData(content, privateKey);
+        System.out.println(&quot;原文:&quot; + data);
+
+        boolean result = RSAUtils.verify2(content, publicKey, sign);
+        System.out.println(&quot;验签结果2:&quot; + result);
+    }
+</code></pre></div></li></ul></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/thisisnohi/nohi-notes/edit/master/docs/zh/notes/加解密/RSA_加解密加签.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> </div></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/nohi-notes/assets/js/3.a6db454b.js" defer></script><script src="/nohi-notes/assets/js/59.a1e5a3c7.js" defer></script><script src="/nohi-notes/assets/js/9.e14bb30f.js" defer></script><script src="/nohi-notes/assets/js/app.e9cf2b0b.js" defer></script>
+  </body>
+</html>
